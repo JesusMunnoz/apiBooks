@@ -1,0 +1,23 @@
+<div class="card">
+    <figure class="imgn">
+        <div class="marco">
+            <img src="{{book.photo}}" alt="">
+            <button class="bX" (click)="onDelete()">X</button>
+        </div>
+    </figure>
+
+    <div class="contenido">
+        <div class="c1">
+            <h4 class="cType">Tapa {{book.type}}</h4>
+            <hr>
+            <h2 class="cTtle">{{book.title}}</h2>
+            <h4 class="cAthr">Autor: {{book.author}}</h4>
+            <h4 class="cIdBk">{{ book.id_book | codigoLibros }}</h4>
+        </div>
+
+        <div class="c2">
+            <h3>{{book.price}} €</h3>
+            <button type="button" class="bComprar" (click)="onDelete()" [ngStyle]="{'background-color': (index % 2 ===0 )? 'rgb(0, 140, 114)' : 'rgb(49, 49, 49)'}">Comprar</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+.fondo{
+    height: 82vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text{
+    height: 80%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+  
+    align-items: center;
+    box-shadow: 0 5px 10px #000;
+    border-radius: 10px;
+    color: black;
+    background: rgba(255, 255, 255, 0.5);
+}
+.t1{
+    width: 90%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    font-size: 50px;
+    align-items: center;
+    padding-top: 25px;
+}
+hr{
+    width: 90%;
+    height: 10px;
+    background: black;
+}
+
+.t2{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.t2Input{
+    height: 10%;
+    width: 80%;
+}
+
+.t2Input.ng-invalid.ng-touched,
+.t2Input.ng-invalid.ng-dirty{
+    border: 2px solid salmon;
+}
+
+.error-message{
+    color: red;
+    font-size: 10px;
+}
+
+.bRegistro{
+    height: 9%;
+    width: 50%;
+    background: rgb(0, 140, 114);
+    border-color: rgb(0, 117, 96);
+    border-radius: 5px; 
+}

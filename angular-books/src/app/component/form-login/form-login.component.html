@@ -1,0 +1,36 @@
+<div class="fondol">
+
+    <form [formGroup]="myForm" class="text">
+        <div class="t1">
+            LogIn
+            <hr>
+        </div>
+        
+        <div class="t2">
+            <input type="text" formControlName="nombre" placeholder="Nombre" class="t2Input">
+            <div *ngIf="myForm.get('nombre').invalid && (myForm.get('nombre').dirty || myForm.get('nombre').touched)" class="error-message">
+                <div *ngIf="myForm.get('nombre').errors?.required"> obligatorio</div>
+            </div>
+
+            <input type="text" formControlName="apellido" placeholder="Apellido" class="t2Input">
+            <div *ngIf="myForm.get('apellido').invalid && (myForm.get('apellido').dirty || myForm.get('apellido').touched)" class="error-message">
+                <div *ngIf="myForm.get('apellido').errors?.required"> obligatorio</div>
+            </div>
+
+            <input type="email" formControlName="email" placeholder="Correo" class="t2Input">
+            <div *ngIf="myForm.get('email').invalid && (myForm.get('email').dirty || myForm.get('email').touched)" class="error-message">
+                <div *ngIf="myForm.get('email').errors?.required">obligatorio</div>
+                <div *ngIf="myForm.get('email').errors?.email">introduzca formato correo ejemplo ...@gmail.com</div>
+            </div>
+            
+            <input type="password" formControlName="password" placeholder="Contraseña" class="t2Input">
+            <div *ngIf="myForm.get('password').invalid && (myForm.get('password').dirty || myForm.get('password').touched)" class="error-message">
+                <div *ngIf="myForm.get('password').errors?.required">obligatorio</div>
+                <div *ngIf="myForm.get('password').errors?.minlength">8 caracteres minimo</div>
+            </div>
+
+            <button type="button" class="bRegistro" [disabled]="myForm.invalid" (click)="onSubmit()">LOGIN</button>
+        </div>
+    </form>
+
+</div>

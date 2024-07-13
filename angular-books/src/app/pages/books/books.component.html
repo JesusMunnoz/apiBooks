@@ -1,0 +1,19 @@
+<div class="fondoBooks">
+
+    <div class="noHay" *ngIf="books.length === 0">
+        <h1>¡No hay libros en la biblioteca!</h1>
+    </div>
+
+    <div class="buscar" >
+        <input type="number" placeholder="Buscar por id" class="inputSearchBook" name="filterBooks" [(ngModel)]="filterBooks" (input)="getOneBook(filterBooks)">
+    </div>
+    
+    <div class="list">
+        <ul class="unList">
+            <li *ngFor = "let book of filteredBooks; let i = index"  class="listItem">
+                <app-card [book]="book" [index]="i" (delete)="deleteBook($event)"></app-card>
+            </li>
+        </ul>
+    </div>
+
+</div>

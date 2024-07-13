@@ -1,0 +1,33 @@
+.fondo{
+    height: 82%;
+    width: 100%;
+    background-color: rgb(119, 119, 119);
+    background-image: url("src/assets/libreria.jpg");
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-size: cover;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+}
+
+.text{
+    height:70%;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+}
+
+h2{
+    font-size: 58px;
+}
+
+h3{
+    font-size: 45px;
+}
+

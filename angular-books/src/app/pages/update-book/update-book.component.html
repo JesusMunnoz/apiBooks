@@ -1,0 +1,16 @@
+<div class="fondoUpDate">
+
+    <div class="formulario">
+        <h1>Modificar libro</h1>
+        <div class="form">
+            <input type="text" placeholder="Título" class="updateBook" #udtBookName >
+            <input type="text" placeholder="Tapa dura / banda" class="updateBook" #udtBookTapa >
+            <input type="text" placeholder="Autor" class="updateBook" #udtBookAutor required>
+            <input type="number" placeholder="Precio" class="updateBook" #udtBookPrecio >
+            <input type="text" placeholder="Photo" class="updateBook" #udtBookPhoto >
+            <input type="number" placeholder="Código" class="updateBook" #udtBookCode>
+        </div>
+        <button class="bModify" (click)="mdfy(udtBookName.value, udtBookTapa.value, udtBookAutor.value, udtBookPrecio.value, udtBookPhoto.value, udtBookCode.value)">Modificar libro</button>
+    </div>
+
+</div>

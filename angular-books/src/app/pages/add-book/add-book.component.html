@@ -1,0 +1,16 @@
+<div class="fondoAdd">
+
+    <div class="formulario">
+        <h1>Añadir libro</h1>
+        <div class="form">
+            <input type="text" placeholder="Título" class="inputAddBook" #addBookName>
+            <input type="text" placeholder="Tapa dura / banda" class="inputAddBook" #addBookTapa>
+            <input type="text" placeholder="Autor" class="inputAddBook" #addBookAutor>
+            <input type="number" placeholder="Precio" class="inputAddBook" #addBookPrecio>
+            <input type="text" placeholder="Photo" class="inputAddBook" #addBookPhoto>
+            <input type="number" placeholder="Código" class="inputAddBook" #addBookCode>
+        </div>
+        <button class="bAdd" (click)="add(addBookName.value, addBookTapa.value, addBookAutor.value, addBookPrecio.value, addBookPhoto.value, addBookCode.value)">Insertar libro</button>
+    </div>
+
+</div>

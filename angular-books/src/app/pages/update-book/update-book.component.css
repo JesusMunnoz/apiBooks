@@ -1,0 +1,56 @@
+.fondoUpDate{
+    height: 82vh;
+    width: 100vw;
+    background-color: rgb(119, 119, 119);
+    background-image: url("src/assets/libreria.jpg");
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-size: cover;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+.form{
+    height: 500px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.updateBook{
+    width: 400px;
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    background: rgba(129, 255, 232, 0);
+}
+input::placeholder{
+    color:white
+}
+.bModify{
+    height: 50px;
+    width: 180px;
+    background: rgb(0, 140, 114);
+    border-color: rgba(0, 140, 114);
+    border-radius: 5px; 
+    font-size: 20px;
+    color: white;
+}

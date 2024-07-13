@@ -1,0 +1,48 @@
+<div class="fondo">
+    <div class="marco">
+        <div class="prfile">
+            <div class="foto">
+                <div class="picture">
+                    <img src="{{miUser.photo}}" alt="">
+                </div>
+                <h2>{{miUser.nombreCompleto()}}</h2>
+            </div>
+
+            <div class="data">
+                <div class="subdata">
+                    <h2>Nombre:</h2>
+                    <div class="marco2">{{miUser.name}}</div>
+                </div>
+
+                <div class="subdata">
+                    <h2>Apellido:</h2>
+                    <div class="marco2">{{miUser.last_name}}</div>
+                </div>
+
+                <div class="subdata">
+                    <h2>Correo:</h2>
+                    <div class="marco2">{{miUser.email}}</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="hr1"></div>
+        <div class="edit">
+            <div class="title">
+                <h1 class="ttlEdit">Editar datos</h1>
+                <div class="hr2"></div>
+            </div>
+
+            <div class="formulario">
+                <div class="inputs">
+                    <input type="text" placeholder="{{miUser.name}}" class="fInput" #changeName>
+                    <input type="text" placeholder="{{miUser.last_name}}" class="fInput" #changeLastName>
+                    <input type="email" placeholder="{{miUser.email}}" class="fInput" #changeEmail>
+                    <input type="url" placeholder="{{miUser.photo}}" class="fInput" #changePhoto>
+                </div>
+                
+                <button type="button" class="bModificar" (click)="enviar(changeName.value, changeLastName.value, changeEmail.value, changePhoto.value)">Modificar</button>
+            </div>
+        </div>
+    </div>
+</div>

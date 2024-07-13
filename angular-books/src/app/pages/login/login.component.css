@@ -1,0 +1,17 @@
+.fondoLog{
+    height: 82vh;
+    width: 100vw;
+    background-color: rgb(119, 119, 119);
+    background-image: url("src/assets/libreria.jpg");
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-size: cover;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
