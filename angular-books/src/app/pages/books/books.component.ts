@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from 'src/app/models/book';
 import { BooksService } from 'src/app/shared/books.service';
+import { Respuesta } from 'src/app/models/respuesta';
 
 @Component({
   selector: 'app-books',
@@ -22,9 +23,9 @@ export class BooksComponent implements OnInit {
   }
 
   loadBooks(): void {
-    this.booksService.getAll().subscribe(response => {
+    this.booksService.getAll().subscribe((response: Respuesta) => {
       if (!response.error) {
-        this.books = response.data;
+        this.books = response.data as Book[];
         this.filteredBooks = this.books;
       } else {
         console.error('ErrorGetAll:', response.mensaje);
@@ -35,9 +36,9 @@ export class BooksComponent implements OnInit {
   getOneBook(filter: string): void {
     const id_book = Number(filter);
     if (id_book) {
-      this.booksService.getOne(id_book).subscribe(response => {
+      this.booksService.getOne(id_book).subscribe((response: Respuesta) => {
         if (!response.error) {
-          this.filteredBooks = [response.data];
+          this.filteredBooks = [response.data as Book];
         } else {
           console.error('ErrorGetOne:', response.mensaje);
           this.filteredBooks = [];
@@ -49,7 +50,7 @@ export class BooksComponent implements OnInit {
   }
 
   deleteBook(book: Book): void {
-    this.booksService.delete(book.id_book).subscribe(response => {
+    this.booksService.delete(book.id_book).subscribe((response: Respuesta) => {
       if (!response.error) {
         this.books = this.books.filter(b => b.id_book !== book.id_book);
         this.filteredBooks = this.books;

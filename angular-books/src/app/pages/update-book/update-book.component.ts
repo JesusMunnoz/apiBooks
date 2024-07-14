@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BooksService } from 'src/app/shared/books.service';
 import { Book } from 'src/app/models/book';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Respuesta } from 'src/app/models/respuesta';
 
 @Component({
   selector: 'app-update-book',
@@ -17,7 +18,7 @@ export class UpdateBookComponent  {
   mdfy(insrtName: string, insrtTapa: string, insrtAutor: string, insrtPrecio: number, insrtPhoto: string, insrtCode: number): void {
     let eBook = new Book(insrtName, insrtTapa, insrtAutor, insrtPrecio, insrtPhoto, insrtCode);
     this.booksService.edit(eBook).subscribe({
-      next: (response) => {
+      next: (response: Respuesta) => {
         console.log('Book updated:', response);
         this.router.navigateByUrl("/books");
       },

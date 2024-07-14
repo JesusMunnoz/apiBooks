@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Book } from 'src/app/models/book';
 import { BooksService } from 'src/app/shared/books.service';
 import { Router } from '@angular/router';
+import { Respuesta } from 'src/app/models/respuesta';
 
 @Component({
   selector: 'app-add-book',
@@ -15,7 +16,7 @@ export class AddBookComponent {
   add(insrtName: string, insrtTapa: string, insrtAutor: string, insrtPrecio: number, insrtPhoto: string, insrtCode: number): void {
     let newBook = new Book(insrtName, insrtTapa, insrtAutor, insrtPrecio, insrtPhoto, insrtCode);
     this.booksService.add(newBook).subscribe({
-      next: (response) => {
+      next: (response: Respuesta) => {
         console.log('Book anadido:', response);
         this.router.navigateByUrl("/books");
       },
