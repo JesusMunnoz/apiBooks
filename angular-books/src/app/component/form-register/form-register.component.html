@@ -29,6 +29,12 @@
                 <div *ngIf="myRegister.get('password').errors?.minlength">8 caracteres minimo</div>
             </div>
 
+            <input type="password" formControlName="confirmPassword" placeholder="Confirmar Contraseña" class="t2Input">
+            <div *ngIf="myRegister.get('confirmPassword').invalid && (myRegister.get('confirmPassword').dirty || myRegister.get('confirmPassword').touched)" class="error-message">
+                <div *ngIf="myRegister.get('confirmPassword').errors?.required">obligatorio</div>
+                <div *ngIf="myRegister.get('confirmPassword').errors?.minlength">8 caracteres mínimo</div>
+            </div>
+
             <button type="button" class="bRegistro" [disabled]="myRegister.invalid" (click)="onSubmit()">Registrate</button>
         </div>
     </div>

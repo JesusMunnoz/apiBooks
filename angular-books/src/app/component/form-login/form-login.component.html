@@ -7,6 +7,7 @@
         </div>
         
         <div class="t2">
+            <!--
             <input type="text" formControlName="nombre" placeholder="Nombre" class="t2Input">
             <div *ngIf="myForm.get('nombre').invalid && (myForm.get('nombre').dirty || myForm.get('nombre').touched)" class="error-message">
                 <div *ngIf="myForm.get('nombre').errors?.required"> obligatorio</div>
@@ -16,6 +17,7 @@
             <div *ngIf="myForm.get('apellido').invalid && (myForm.get('apellido').dirty || myForm.get('apellido').touched)" class="error-message">
                 <div *ngIf="myForm.get('apellido').errors?.required"> obligatorio</div>
             </div>
+            -->
 
             <input type="email" formControlName="email" placeholder="Correo" class="t2Input">
             <div *ngIf="myForm.get('email').invalid && (myForm.get('email').dirty || myForm.get('email').touched)" class="error-message">
