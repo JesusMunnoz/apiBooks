@@ -19,6 +19,9 @@ import { AddBookComponent } from './pages/add-book/add-book.component';
 import { BooksService } from './shared/books.service';
 import { LoginComponent } from './pages/login/login.component';
 import { FormLoginComponent } from './component/form-login/form-login.component';
+
+import { UserService } from './shared/user.service';
+
 //import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
@@ -46,7 +49,7 @@ import { FormLoginComponent } from './component/form-login/form-login.component'
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [BooksService],
+  providers: [BooksService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

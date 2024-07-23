@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   })
 
 export class UserService {
-    private myApi: string = 'http://localhost:3000'; // URL de tu API REST
+    private myApi: string = 'http://localhost:3000';
     public logueado: boolean = false;
     public user: User | null = null;
   
@@ -30,5 +30,9 @@ export class UserService {
     logout(): void {
       this.user = null;
       this.logueado = false;
+    }
+
+    isLoggedIn(): boolean {
+      return this.logueado;
     }
 }

@@ -42,7 +42,9 @@ export class FormLoginComponent implements OnInit {
           if (data) {
             this.userService.setUser(data);
             console.log('Login successful', data);
-            this.router.navigateByUrl('/books');
+            setTimeout(() => {
+              this.router.navigateByUrl('/books');
+            }, 0);
           } else {
             console.log('Invalid email or password');
           }
@@ -59,6 +61,7 @@ export class FormLoginComponent implements OnInit {
 
   ngOnInit(): void {}
 }
+
 /*
 export class FormLoginComponent implements OnInit{
   

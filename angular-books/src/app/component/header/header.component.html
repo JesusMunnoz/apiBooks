@@ -1,14 +1,15 @@
 <header>
     <div class="titulo">
-        <h1>MyBooks</h1>
+      <h1>MyBooks</h1>
     </div>
     <div class="links">
-        <a routerLink="/home" routerLinkActive="selected">Home</a>
-        <a routerLink="/add" routerLinkActive="selected">AddBook</a>
-        <a routerLink="/update" routerLinkActive="selected">UpdateBooks</a>
-        <a routerLink="/books" routerLinkActive="selected">Books</a>
-        <a routerLink="/registro" routerLinkActive="selected">Register</a>
-        <a routerLink="/login" routerLinkActive="selected">Login</a>
-        <a routerLink="/perfil" routerLinkActive="selected">User</a>
+      <a *ngIf="!isLoggedIn" routerLink="/home" routerLinkActive="selected">Home</a>
+      <a *ngIf="!isLoggedIn" routerLink="/registro" routerLinkActive="selected">Register</a>
+      <a *ngIf="!isLoggedIn" routerLink="/login" routerLinkActive="selected">Login</a>
+
+      <a *ngIf="isLoggedIn" routerLink="/books" routerLinkActive="selected">Books</a>
+      <a *ngIf="isLoggedIn" routerLink="/add" routerLinkActive="selected">AddBook</a>
+      <a *ngIf="isLoggedIn" routerLink="/update" routerLinkActive="selected">UpdateBooks</a>
+      <a *ngIf="isLoggedIn" routerLink="/perfil" routerLinkActive="selected">User</a>
     </div>
-</header>
+  </header>
